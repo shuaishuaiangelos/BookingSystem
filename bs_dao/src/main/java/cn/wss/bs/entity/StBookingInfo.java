@@ -9,11 +9,48 @@ public class StBookingInfo {
     private String stid;
     private String usid;
     private int state;  //用户主动结束可设置state
-    private Date bookingTimr;   //预定时间
+    private Date bookingTime;   //预定时间
     private Date confirmTime;   //确认占用时间
     private Date endTime;   //结束时间
     private Date createTime;    //创建时间
     private Date updateTime;    //更新时间
+
+    public StBookingInfo(){}
+
+    public StBookingInfo(int id,String tbid,String crid,String stid,String usid,int state,Date bookingTime,Date confirmTime,Date endTime,Date createTime,Date updateTime){
+        this.id=id;
+        this.tbid=tbid;
+        this.crid=crid;
+        this.stid=stid;
+        this.usid=usid;
+        this.state=state;
+        this.bookingTime=bookingTime;
+        this.confirmTime=confirmTime;
+        this.endTime=endTime;
+        this.createTime=createTime;
+        this.updateTime=updateTime;
+    }
+
+    public StBookingInfo(int id,String tbid,String crid,String stid,String usid,int state,Date bookingTime,Date confirmTime,Date endTime){
+        this.id=id;
+        this.tbid=tbid;
+        this.crid=crid;
+        this.stid=stid;
+        this.usid=usid;
+        this.state=state;
+        this.bookingTime=bookingTime;
+        this.confirmTime=confirmTime;
+        this.endTime=endTime;
+    }
+
+    public StBookingInfo(int id,String tbid,String crid,String stid,String usid,int state){
+        this.id=id;
+        this.tbid=tbid;
+        this.crid=crid;
+        this.stid=stid;
+        this.usid=usid;
+        this.state=state;
+    }
 
     public int getId() {
         return id;
@@ -39,8 +76,8 @@ public class StBookingInfo {
         return state;
     }
 
-    public Date getBookingTimr() {
-        return bookingTimr;
+    public Date getBookingTime() {
+        return bookingTime;
     }
 
     public Date getConfirmTime() {
@@ -83,8 +120,8 @@ public class StBookingInfo {
         this.state = state;
     }
 
-    public void setBookingTimr(Date bookingTimr) {
-        this.bookingTimr = bookingTimr;
+    public void setBookingTime(Date bookingTime) {
+        this.bookingTime = bookingTime;
     }
 
     public void setConfirmTime(Date confirmTime) {

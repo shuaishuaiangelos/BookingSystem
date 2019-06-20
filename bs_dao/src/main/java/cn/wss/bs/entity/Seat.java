@@ -12,6 +12,28 @@ public class Seat {
     private Date createTime;
     private Date updateTime;
 
+    public Seat(){}
+
+    public Seat(String id,String crid,String tbid,String content,int state,String str,Date createTime,Date updateTime){
+        this.id=id;
+        this.crid=crid;
+        this.tbid=tbid;
+        this.content=content;
+        this.state=state;
+        this.str=str;
+        this.createTime=createTime;
+        this.updateTime=updateTime;
+    }
+
+    public Seat(String id,String crid,String tbid,String content,int state,String str){
+        this.id=id;
+        this.crid=crid;
+        this.tbid=tbid;
+        this.content=content;
+        this.state=state;
+        this.str=str;
+    }
+
     public String getId() {
         return id;
     }

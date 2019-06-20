@@ -5,10 +5,26 @@ import java.util.Date;
 public class User {
     private String id;
     private String name;
-    private String paddword;
+    private String password;
     private int authority;  //权力级别
     private Date createTime;
     private Date updateTime;
+
+    public User(){}
+
+    public User(String id,String name,int authorit,Date createTime,Date updateTime){
+        this.id=id;
+        this.name=name;
+        this.authority=authorit;
+        this.createTime=createTime;
+        this.updateTime=updateTime;
+    }
+
+    public User(String id,String name,int authorit){
+        this.id=id;
+        this.name=name;
+        this.authority=authorit;
+    }
 
     public String getId() {
         return id;
@@ -19,7 +35,7 @@ public class User {
     }
 
     public String getPaddword() {
-        return paddword;
+        return password;
     }
 
     public int getAuthority() {
@@ -42,8 +58,8 @@ public class User {
         this.name = name;
     }
 
-    public void setPaddword(String paddword) {
-        this.paddword = paddword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setAuthority(int authority) {

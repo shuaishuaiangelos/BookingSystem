@@ -13,6 +13,30 @@ public class Classroom {
     private Date createTime;
     private Date updateTime;
 
+    public Classroom(){}
+
+    public Classroom(String id,String tbid,int setNum,String name,String content,int flag,String str,Date createTime,Date updateTime){
+        this.id=id;
+        this.tbid=tbid;
+        this.setNum=setNum;
+        this.name=name;
+        this.content=content;
+        this.flag=flag;
+        this.str=str;
+        this.createTime=createTime;
+        this.updateTime=updateTime;
+    }
+
+    public Classroom(String id,String tbid,int setNum,String name,String content,int flag,String str){
+        this.id=id;
+        this.tbid=tbid;
+        this.setNum=setNum;
+        this.name=name;
+        this.content=content;
+        this.flag=flag;
+        this.str=str;
+    }
+
     public String getId() {
         return id;
     }
