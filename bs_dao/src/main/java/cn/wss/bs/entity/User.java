@@ -26,6 +26,13 @@ public class User {
         this.authority=authorit;
     }
 
+    public User(String id,String name, String password, int authorit){
+        this.id=id;
+        this.name=name;
+        this.password = password;
+        this.authority=authorit;
+    }
+
     public String getId() {
         return id;
     }

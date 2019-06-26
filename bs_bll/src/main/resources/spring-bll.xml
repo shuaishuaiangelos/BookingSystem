@@ -8,7 +8,7 @@
 
         <import resource="spring-dao.xml"/>
 
-        <context:component-scan base-package="cn.wss.bs.bll"/>
+        <context:component-scan base-package="cn.wss.bs.entity"/>
 
         <aop:aspectj-autoproxy/>
 
@@ -26,7 +26,7 @@
         </tx:advice>
 
         <aop:config>
-            <aop:pointcut id="txpc" expression="execution(* cn.wss.bs.bll.*.*(..))"/>
+            <aop:pointcut id="txpc" expression="execution(* cn.wss.bs.entity.*.*(..))"/>
             <aop:advisor advice-ref="txAdvice" pointcut-ref="txpc"/>
         </aop:config>
 </beans>
