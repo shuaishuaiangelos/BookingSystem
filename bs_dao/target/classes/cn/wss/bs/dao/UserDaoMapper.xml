@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wss.bs.dao.UserDao">
+    <insert id="insertUser" parameterType="cn.wss.bs.entity.User">
+        insert into BS_User(User_Id,User_Name,User_Pwd,User_Authority)
+          value(#{id},#{name},#{password},#{authority})
+    </insert>
+    <select id="findUserById" resultType="cn.wss.bs.entity.User">
+        select User_Id as id,User_Name as name,User_Pwd as password,User_Authority as authority from BS_User where User_Id=#{id}
+    </select>
+    <update id="updateUser">
+        update BS_User set User_Name=#{name},User_Pwd=#{password},User_Authority=#{authority} where User_Id=#{id}
+    </update>
+    <delete id="deleteUserById">
+        delete from BS_User where User_Id=#{id}
+    </delete>
+
+    <select id="getAllUsers" resultType="cn.wss.bs.entity.User">
+        select User_Id as id,User_Name as name,User_Pwd as password,User_Authority as authority from BS_User
+    </select>
+</mapper>
