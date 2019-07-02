@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wss.bs.dao.StBookingInfoDao">
+    <insert id="insertStBookingInfo" parameterType="cn.wss.bs.entity.StBookingInfo">
+        insert into BS_StBookingInfo(SBI_TBid,SBI_Crid,SBI_Stid,SBI_Usid,SBI_state,SBI_BookingTime,SBI_EndTime)
+          value(#{tbid},#{crid},#{stid},#{usid},#{state},#{bookingTime},#{endTime})
+    </insert>
+
+    <select id="getAllStBookingInfo" resultType="cn.wss.bs.entity.StBookingInfo">
+        select SBI_Id as id,SBI_TBid as tbid,SBI_Crid as crid,SBI_Stid as stid,SBI_Usid as usid,SBI_state  as state,SBI_BookingTime as bookingTime from BS_StBookingInfo
+    </select>
+</mapper>

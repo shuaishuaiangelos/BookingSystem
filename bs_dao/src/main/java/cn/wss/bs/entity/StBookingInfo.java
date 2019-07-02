@@ -43,6 +43,16 @@ public class StBookingInfo {
         this.endTime=endTime;
     }
 
+    public StBookingInfo(String tbid,String crid,String stid,String usid,int state,Date bookingTime,Date endTime){
+        this.tbid=tbid;
+        this.crid=crid;
+        this.stid=stid;
+        this.usid=usid;
+        this.state=state;
+        this.bookingTime=bookingTime;
+        this.endTime=endTime;
+    }
+
     public StBookingInfo(int id,String tbid,String crid,String stid,String usid,int state){
         this.id=id;
         this.tbid=tbid;
