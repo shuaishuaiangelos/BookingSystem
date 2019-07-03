@@ -61,4 +61,11 @@
         where St_TBid=#{tbid} and St_Crid=#{crid} and St_State=#{state}
     </select>
 
+    <insert id="insertSeats" parameterType="java.util.List">
+        insert into BS_Seat(St_Id,St_TBid,St_Crid,St_Content,St_State,St_Str)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+          (#{item.id},#{item.tbid},#{item.crid},#{item.content},#{item.state},#{item.str})
+        </foreach>
+    </insert>
 </mapper>

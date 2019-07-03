@@ -32,11 +32,6 @@ public class TestForSql {
         Date date = new Date();
         StBookingInfo sbi = new StBookingInfo("001","002","001","S201761137",0,date,date);
 
-        UserDao ud = (UserDao)applicationContext.getBean("userDao");
-        User user = new User("S201761392", "wss", "wss", 1);
-        User user1=new User("S201761137", "xss", "xss", 1);
-        ClassroomDao cd=(ClassroomDao)applicationContext.getBean("classroomDao");
-        Classroom classroom = new Classroom("1","1",30,"人工智能","深度学习",1,"11111111");
         TeachBuildingDao tbd = (TeachBuildingDao)applicationContext.getBean("teachBuildingDao");
         TeachBuilding teachBuilding = new TeachBuilding("2","信息楼","信息学部","1111");
 

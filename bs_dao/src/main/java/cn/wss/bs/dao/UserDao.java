@@ -9,4 +9,5 @@ public interface UserDao {
     void deleteUserById(String id) throws Exception;
     void updateUser(User user) throws Exception;
     List<User> getAllUsers() throws Exception;
+    void insertUsers(List<User> list) throws Exception;
 }

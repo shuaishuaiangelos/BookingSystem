@@ -21,4 +21,12 @@
     <select id="getAllTeachBuilding" resultType="cn.wss.bs.entity.TeachBuilding">
         select TB_Id as id, TB_Name as name,TB_Content as content,TB_Str as str,TB_CreateTime as createTime,TB_UpdateTime as updateTime from bs_teachingbuilding
     </select>
+
+    <insert id="insertTeachBuildings" parameterType="java.util.List">
+        insert into bs_teachingbuilding(TB_Id,TB_Name,TB_Content,TB_Str)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.id},#{item.name},#{item.content},#{item.str})
+        </foreach>
+    </insert>
 </mapper>

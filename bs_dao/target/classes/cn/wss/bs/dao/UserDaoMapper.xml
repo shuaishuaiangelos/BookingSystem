@@ -18,4 +18,12 @@
     <select id="getAllUsers" resultType="cn.wss.bs.entity.User">
         select User_Id as id,User_Name as name,User_Pwd as password,User_Authority as authority from BS_User
     </select>
+
+    <insert id="insertUsers" parameterType="java.util.List">
+        insert into BS_User(User_Id,User_Name,User_Pwd,User_Authority)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.id},#{item.name},#{item.password},#{item.authority})
+        </foreach>
+    </insert>
 </mapper>
