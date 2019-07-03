@@ -37,6 +37,15 @@ public class CrBookingInfo {
         this.endTime=endTime;
     }
 
+    public CrBookingInfo(String tbid,String crid,String usid,int state,Date startTime,Date endTime){
+        this.tbid=tbid;
+        this.crid=crid;
+        this.usid=usid;
+        this.state=state;
+        this.startTime=startTime;
+        this.endTime=endTime;
+    }
+
     public CrBookingInfo(int id,String tbid,String crid,String usid,int state){
         this.id=id;
         this.tbid=tbid;
