@@ -18,10 +18,10 @@ public class TestForCr {
         rightNow.setTime(date);
         rightNow.add(Calendar.DAY_OF_YEAR, 1);//日期加1天
         Date date2 = rightNow.getTime();
-        CrBookingInfo sbi = new CrBookingInfo("001", "001", "S201761137", 0, date, date2);
+        CrBookingInfo sbi = new CrBookingInfo("1", "1", "S201761137", 0, date, date2);
         rightNow.add(Calendar.DAY_OF_YEAR, 1);//日期加1天
         Date date3 = rightNow.getTime();
-        CrBookingInfo sbi2 = new CrBookingInfo("001", "001", "S201761137", 0, date2, date3);
+        CrBookingInfo sbi2 = new CrBookingInfo("1", "1", "S201761137", 0, date2, date3);
         try{
             cbd.insertCrBookingInfo(sbi);
             cbd.insertCrBookingInfo(sbi2);
