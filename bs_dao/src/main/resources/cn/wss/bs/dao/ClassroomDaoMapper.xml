@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wss.bs.dao.ClassroomDao">
+    <insert id="insertClassroom" parameterType="cn.wss.bs.entity.Classroom">
+        insert into bs_classroom(Cr_Id,Cr_TBid,Cr_SeatNum,Cr_Name,Cr_Content,Cr_Flag,Cr_Str)
+        values(#{id},#{tbid},#{setNum},#{name},#{content},#{flag},#{str})
+    </insert>
+
+    <select id="findClassroomById" resultType="cn.wss.bs.entity.Classroom">
+        select Cr_Id as id,Cr_TBid as tbid,Cr_SeatNum as seatNum,Cr_Name as name,Cr_Content as content,Cr_Flag as flag,Cr_Str as str,Cr_CreateTime as createTime,Cr_UpdateTime as updateTime from bs_classroom where Cr_Id=#{id}
+    </select>
+
+    <update id="updateClassroom">
+        update bs_classroom set Cr_TBid=#{tbid},Cr_SeatNum=#{seatNum},Cr_Name=#{name},Cr_Content=#{content},Cr_Flag=#{flag},Cr_Str=#{str} where Cr_Id=#{id}
+    </update>
+
+    <delete id="deleteClassroomById">
+        delete from bs_classroom where Cr_Id=#{id}
+    </delete>
+
+    <select id="getAllClassroom" resultType="cn.wss.bs.entity.Classroom">
+        select Cr_Id as id,Cr_TBid as tbid,Cr_SeatNum as seatNum,Cr_Name as name,Cr_Content as content,Cr_Flag as flag,Cr_Str as str,Cr_CreateTime as createTime,Cr_UpdateTime as updateTime from bs_classroom
+    </select>
+</mapper>
