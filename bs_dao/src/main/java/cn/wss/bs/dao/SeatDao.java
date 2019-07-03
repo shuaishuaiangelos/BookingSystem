@@ -19,4 +19,5 @@ public interface SeatDao {
     List<Seat> getSeatsWithState(int state) throws Exception;   //返回某一状态的所有座位
     List<Seat> getSeatsByTbIdWithState(@Param("tbid")String tbid, @Param("state")int state) throws Exception; //返回某一教学楼某一状态的所有座位
     List<Seat> getSeatsByCrIdWithState(@Param("crid")String crid, @Param("tbid")String tbid, @Param("state")int state) throws Exception; //返回某一教学楼某一教室某一状态的所有座位
+    void insertSeats(List<Seat> list) throws Exception; // 批量插入
 }

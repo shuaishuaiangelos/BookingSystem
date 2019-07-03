@@ -21,4 +21,12 @@
     <select id="getAllClassroom" resultType="cn.wss.bs.entity.Classroom">
         select Cr_Id as id,Cr_TBid as tbid,Cr_SeatNum as seatNum,Cr_Name as name,Cr_Content as content,Cr_Flag as flag,Cr_Str as str,Cr_CreateTime as createTime,Cr_UpdateTime as updateTime from bs_classroom
     </select>
+
+    <insert id="insertClassrooms" parameterType="java.util.List">
+        insert into bs_classroom(Cr_Id,Cr_TBid,Cr_SeatNum,Cr_Name,Cr_Content,Cr_Flag,Cr_Str)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+          (#{item.id},#{item.tbid},#{item.setNum},#{item.name},#{item.content},#{item.flag},#{item.str})
+        </foreach>
+    </insert>
 </mapper>
