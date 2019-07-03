@@ -9,4 +9,5 @@ public interface TeachBuildingDao {
     void deleteTeachBuildingById(String id) throws Exception;
     void updateTeachBuilding(TeachBuilding teachBuilding) throws Exception;
     List<TeachBuilding> getAllTeachBuilding() throws Exception;
+    void insertTeachBuildings(List<TeachBuilding> list) throws Exception;
 }

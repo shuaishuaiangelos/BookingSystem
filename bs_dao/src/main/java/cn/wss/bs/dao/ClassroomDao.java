@@ -10,4 +10,5 @@ public interface ClassroomDao {
     void deleteClassroomById(String id) throws Exception;
     void updateClassroom(Classroom classroom) throws Exception;
     List<Classroom> getAllClassroom() throws Exception;
+    void insertClassrooms(List<Classroom> list) throws Exception;
 }
