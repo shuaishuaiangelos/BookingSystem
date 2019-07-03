@@ -2,7 +2,7 @@ package cn.wss.bs.entity;
 
 import java.util.Date;
 
-public class TeachBuiding {
+public class TeachBuilding {
     private String id;
     private String name;
     private String content;  //备注
@@ -10,9 +10,9 @@ public class TeachBuiding {
     private Date createTime;
     private Date updateTime;
 
-    public TeachBuiding(){}
+    public TeachBuilding(){}
 
-    public TeachBuiding(String id,String name,String content,String str,Date createTime,Date updateTime){
+    public TeachBuilding(String id,String name,String content,String str,Date createTime,Date updateTime){
         this.id=id;
         this.name=name;
         this.content=content;
@@ -21,7 +21,7 @@ public class TeachBuiding {
         this.updateTime=updateTime;
     }
 
-    public TeachBuiding(String id,String name,String content,String str){
+    public TeachBuilding(String id,String name,String content,String str){
         this.id=id;
         this.name=name;
         this.content=content;
