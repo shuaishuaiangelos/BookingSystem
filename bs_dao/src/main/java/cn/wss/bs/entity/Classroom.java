@@ -5,7 +5,7 @@ import java.util.Date;
 public class Classroom {
     private String id;
     private String tbid; //教学楼id
-    private int setNum; //座位数量
+    private int seatNum; //座位数量
     private String name;
     private String content;
     private int flag; //标志，用于区分教室和自习室
@@ -18,7 +18,7 @@ public class Classroom {
     public Classroom(String id,String tbid,int setNum,String name,String content,int flag,String str,Date createTime,Date updateTime){
         this.id=id;
         this.tbid=tbid;
-        this.setNum=setNum;
+        this.seatNum=setNum;
         this.name=name;
         this.content=content;
         this.flag=flag;
@@ -30,7 +30,7 @@ public class Classroom {
     public Classroom(String id,String tbid,int setNum,String name,String content,int flag,String str){
         this.id=id;
         this.tbid=tbid;
-        this.setNum=setNum;
+        this.seatNum=setNum;
         this.name=name;
         this.content=content;
         this.flag=flag;
@@ -46,7 +46,7 @@ public class Classroom {
     }
 
     public int getSetNum() {
-        return setNum;
+        return seatNum;
     }
 
     public String getName() {
@@ -82,7 +82,7 @@ public class Classroom {
     }
 
     public void setSetNum(int setNum) {
-        this.setNum = setNum;
+        this.seatNum = setNum;
     }
 
     public void setName(String name) {

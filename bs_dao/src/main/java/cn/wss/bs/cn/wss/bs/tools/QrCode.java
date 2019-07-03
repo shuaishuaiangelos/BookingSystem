@@ -1,19 +1,16 @@
 package cn.wss.bs.cn.wss.bs.tools;
 
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.EncodeHintType;
-import com.google.zxing.WriterException;
+import com.google.zxing.*;
 import com.google.zxing.common.BitMatrix;
+import com.google.zxing.common.HybridBinarizer;
+import com.google.zxing.qrcode.QRCodeReader;
 import com.google.zxing.qrcode.QRCodeWriter;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 import java.util.Hashtable;
 
 public class QrCode {
@@ -52,4 +49,21 @@ public class QrCode {
         OutputStream outputStream=new FileOutputStream(new File(filePath));
         return ImageIO.write(image, imageFormat, outputStream);
     }
+
+//    /**     * 读二维码并输出携带的信息     */
+//    public static void readQrCode(InputStream inputStream) throws IOException{
+//        //从输入流中获取字符串信息
+//        BufferedImage image = ImageIO.read(inputStream);
+//        //将图像转换为二进制位图源
+//        LuminanceSource source = new BufferedImageLuminanceSource(image);
+//        BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
+//        QRCodeReader reader = new QRCodeReader();
+//        Result result = null ;
+//        try {
+//            result = reader.decode(bitmap);
+//        } catch (ReaderException e) {
+//            e.printStackTrace();
+//        }
+//        System.out.println(result.getText());
+//    }
 }
