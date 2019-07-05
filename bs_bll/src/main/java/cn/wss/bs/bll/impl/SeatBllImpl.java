@@ -3,11 +3,16 @@ package cn.wss.bs.bll.impl;
 import cn.wss.bs.bll.SeatBll;
 import cn.wss.bs.dao.SeatDao;
 import cn.wss.bs.entity.Seat;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service("seatBllImlp")
 public class SeatBllImpl implements SeatBll {
 
+    @Autowired
     private SeatDao seatDao;
 
     public void addSeat(Seat seat) throws Exception {

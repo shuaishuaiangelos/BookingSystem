@@ -2,9 +2,11 @@ package cn.wss.bs.dao;
 
 import cn.wss.bs.entity.Seat;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface SeatDao {
     Seat findSeatAccurately(@Param("id")String id, @Param("crid")String crid, @Param("tbid")String tbid) throws Exception; //查找某一具体座位
     Seat findSeatAccuratelyWithState(@Param("id")String id, @Param("crid")String crid, @Param("tbid")String tbid, @Param("state")int state) throws Exception; //查找某一具体状态座位
