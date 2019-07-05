@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-        <context:component-scan base-package="cn.wss.bs.entity,cn.wss.bs.dao"/>
+        <context:component-scan base-package="cn.wss.bs.entity,cn.wss.bs.dao" use-default-filters="true"/>
 
         <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
             <property name="driverClassName" value="com.mysql.jdbc.Driver"/>

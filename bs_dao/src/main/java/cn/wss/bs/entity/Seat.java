@@ -1,7 +1,10 @@
 package cn.wss.bs.entity;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Date;
 
+@Component
 public class Seat {
     private String id;
     private String crid;    //教室编号
